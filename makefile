@@ -17,4 +17,6 @@ browserify:
 styl:
 	@$(SUPERVISOR) -q -e 'styl' -w 'public/styl' bin/styl
 
-.PHONY: server browserify install run styl all
+test: ./node_modules/.bin/mocha
+
+.PHONY: server browserify install run styl test all
