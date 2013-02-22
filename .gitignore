@@ -12,3 +12,6 @@ Thumbs.db
 # Node Stuff #
 ##############
 node_modules
+
+public/css/main.css
+public/js/app.js
