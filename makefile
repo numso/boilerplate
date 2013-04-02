@@ -3,20 +3,22 @@ SUPERVISOR := ./node_modules/.bin/supervisor
 all:
 	@make -j browserify styl server
 
-run: all
-
 install:
 	@npm install
+
+run: server
+
+build:
+	@node bin/compileBrowserify
+	@node bin/compileStyl
 
 server:
 	@$(SUPERVISOR) -q -w controllers,middlewares,app.js app
 
 browserify:
-	@$(SUPERVISOR) -q -e 'js|jade' -w views/public,client bin/browserify
+	@$(SUPERVISOR) -q -e js -w client bin/watchBrowserify
 
 styl:
-	@$(SUPERVISOR) -q -e 'styl' -w 'public/styl' bin/styl
+	@$(SUPERVISOR) -q -e styl -w public/styl bin/watchStyl
 
-test: ./node_modules/.bin/mocha
-
-.PHONY: server browserify install run styl test all
+.PHONY: server browserify styl run build install all

@@ -1,12 +1,10 @@
 extends ../layout
 
 block content
-  h1 Welcome to myApp
-  .lists
+  p content goes here
+  .test replace me
 
 append scripts
   script
-    $(function () {
-      var render = require('/client/requires/render');
-      $(".lists").append(render('list-test', { title: 'hi', items: [] }));
-    });
+    var test = render('test', { test: 'bubba' });
+    $('.test').html(test);

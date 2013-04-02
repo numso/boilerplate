@@ -18,7 +18,8 @@ Use this code when starting out node projects
 
 ###To run the app:
 
-    make
+    make run // to run the app
+    make     // to run the app while watching files
 
 Go to http://localhost:3000.
 
