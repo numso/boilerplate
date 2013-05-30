@@ -3,17 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app"
+    "start": "node app.js"
   },
   "dependencies": {
-    "express": "3.0.4",
+    "express": "3.2.5",
     "jade": "*",
-    "stylus": "*",
-    "supervisor": "~0.5.0",
-    "sleep": "~1.1.0",
-    "bless": "~3.0.2",
-    "waitress": "~0.1.2",
-    "browserify": "~2.10.1",
-    "browserijade": "~0.5.7"
+    "stylus": "*"
   }
 }
