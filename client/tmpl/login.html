@@ -1,0 +1,27 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <a href="#" class="brand">{{title}}</a>
+    <ul class="nav">
+      <li ng-repeat="item in nav" ng-class="{active:item.label==msg}">
+        <a href="#{{item.url}}">{{item.label}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div id="login">
+  <h1>{{msg}} Page</h1>
+  <form>
+    <div>
+      <label>Username:</label>
+      <input type="text" ng-model="user">
+    </div>
+    <div>
+      <label>Password:</label>
+      <input type="password" ng-model="pass">
+    </div>
+    <div>
+      <button class="btn">Submit</button>
+    </div>
+  </form>
+</div>

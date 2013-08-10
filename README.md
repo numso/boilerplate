@@ -1,21 +1,18 @@
-Impress Boilerplate
-===================
+Boilerplate for an Angular App
+===
 
-## The Setup
+##Installation
 
-    git clone git@github.com:numso/boilerplate.git
-    git checkout impress
-    npm install
-    npm start
+From the command line run `npm install` and `npm install grunt-cli -g`
 
-It'll run on port 3000.
+##Running the App
 
+Run `npm startt`
 
-## The Dev
+##Running the App in Production Mode
 
-Edit the files
-- views/index.jade
-- public/css/style.styl
-- img/
+Run `grunt build` and `export NODE_ENV=production` then `npm start`
 
-Good Luck
+##Grunt Commands
+
+This app uses grunt, the following commands are available: `grunt hint`, `grunt build`, `grunt clean`
