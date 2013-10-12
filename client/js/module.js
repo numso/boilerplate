@@ -1,10 +1,10 @@
 /* global angular, mNav */
-angular.module('app', ['ui.bootstrap']).config(
-  function ($routeProvider) {
+angular.module('app', ['ui.bootstrap', 'ui.router']).config(
+  function ($stateProvider, $urlRouterProvider) {
     'use strict';
 
     for (var i = 0; i < mNav.length; ++i) {
-      $routeProvider.when(mNav[i].url, {
+      $stateProvider.state(mNav[i].state, {
         templateUrl: mNav[i].tmpl,
         controller: mNav[i].ctrl,
         name: mNav[i].label,
@@ -12,6 +12,6 @@ angular.module('app', ['ui.bootstrap']).config(
       });
     }
 
-    $routeProvider.otherwise({ redirectTo: '/' });
+    $urlRouterProvider.otherwise('/');
   }
 );
