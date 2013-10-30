@@ -9,7 +9,10 @@ module.exports = function (grunt) {
       app: {
         expand: true,
         cwd: 'client/js',
-        src: ['**/*.js', '!lib/**']
+        src: [
+          '**/*.js',
+          '!lib/**'
+        ]
       }
     },
 

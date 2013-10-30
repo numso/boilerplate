@@ -1,10 +1,7 @@
-/* global angular */
-angular.module('app').controller('mainCtrl',
-  function ($scope, nav) {
+/* global app */
+app.controller('mainCtrl',
+  function ($scope) {
     'use strict';
-
-    $scope.title = 'App';
-    $scope.nav = nav;
-    $scope.msg = 'Main';
+    $scope.msg = 'Here\'s the index. Publicly available to all.';
   }
 );
